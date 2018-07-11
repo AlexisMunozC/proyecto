@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_09_171749) do
+ActiveRecord::Schema.define(version: 2018_07_11_211306) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer "Codigo_Postal"
+    t.string "Estado"
+    t.string "Municipio"
+    t.string "Ciudad"
+    t.string "Tipo_de_Asentamiento"
+    t.integer "Clave_de_Oficina"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,6 +40,12 @@ ActiveRecord::Schema.define(version: 2018_07_09_171749) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "careers", force: :cascade do |t|
+    t.string "Descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "companies", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -44,6 +61,12 @@ ActiveRecord::Schema.define(version: 2018_07_09_171749) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.string "Grupo", limit: 1, default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "students", force: :cascade do |t|

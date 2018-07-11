@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Codigo_Postal: 1
+  Estado: MyString
+  Municipio: MyString
+  Ciudad: MyString
+  Tipo_de_Asentamiento: MyString
+  Clave_de_Oficina: 1
+
+two:
+  Codigo_Postal: 1
+  Estado: MyString
+  Municipio: MyString
+  Ciudad: MyString
+  Tipo_de_Asentamiento: MyString
+  Clave_de_Oficina: 1
